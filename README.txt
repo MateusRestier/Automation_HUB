@@ -1,0 +1,1 @@
+Para as automações rodarem, é necessário clonar o repositório PRIVATE_BAG.ENV também.
