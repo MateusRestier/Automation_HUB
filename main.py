@@ -12,11 +12,12 @@ import logging
 base_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Define os diretórios relativos
-prod_dir = os.path.join(base_dir, "PROD")
+prod_dir = os.path.join(base_dir, "FISCAL", "PROD")
 cmv_dir = os.path.join(base_dir, "CMV")
 cd_dir = os.path.join(base_dir, "CD")
 zen_dir = os.path.join(base_dir, "ZEN")
-bahia_dir = os.path.join(base_dir, "FISCAL", "BAHIA")
+bahia_dir = os.path.join(base_dir, "FISCAL", "GUIAS", "BAHIA")
+alagoas_dir = os.path.join(base_dir, "FISCAL", "GUIAS", "ALAGOAS")
 
 # Configura o logger
 log_file = os.path.join(base_dir, "execution_log.txt")
@@ -29,7 +30,7 @@ scripts_daily = [ # Roda todos os dias
     os.path.join(zen_dir, "ScrapTicketAtribuicao_D-1.py"),
     os.path.join(zen_dir, "ScrapCriadosResolvidos_D-1.py"),
     os.path.join(cmv_dir, "AutomacaoCMV.py"),
-    os.path.join(prod_dir, "imap_and_pop_connection.py"),
+    os.path.join(prod_dir, "FiscalProdAnalyzer.py"),
     os.path.join(zen_dir, "tickets.py"),
     os.path.join(zen_dir, "activities.py"),
 ]
@@ -44,7 +45,7 @@ scripts_weekly = [ # Roda uma vez por semana, toda segunda feira
 ]
 
 scripts_weekdays = [ # Roda de seg a sexta
-    os.path.join(bahia_dir, "ScrapAutomacao.py")
+    os.path.join(bahia_dir, "ScrapAutomacaoBahia.py")
 ]
 
 # Função para enviar e-mails em caso de erro
