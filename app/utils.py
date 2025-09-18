@@ -4,9 +4,7 @@ import pythoncom
 import logging
 from datetime import datetime
 from win32com.client import Dispatch
-
-# Importa variáveis do nosso módulo de configuração
-from config import log_file
+from config import log_file # Importa o log_file do config.py
 
 """
 Este módulo contém funções de utilidade usadas em todo o projeto.

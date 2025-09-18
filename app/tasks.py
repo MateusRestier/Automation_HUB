@@ -5,9 +5,6 @@ Este módulo define as listas de scripts que devem ser executados
 em diferentes agendamentos, usando a estrutura de múltiplos repositórios.
 """
 
-# Você precisará confirmar em qual repositório cada script está.
-# Este é um exemplo de como poderia ser:
-
 scripts_daily = [ # Roda todos os dias 
     get_script_path("MAT_Logistics_Tracking_ETL", "UpdateAcompNacional.py"),
     get_script_path("MAT_ZendeskScrap", "ScrapTicketAtribuicao_D-1.py"),
